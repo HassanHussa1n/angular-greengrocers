@@ -1,9 +1,13 @@
 <header id="store">
   <h1>Greengrocers</h1>
+  <app-items (addToCartEvent)="addToCart($event)"></app-items>
   <!-- your store here -->
 </header>
 <main id="cart">
   <h2>Your Cart</h2>
+  <app-cart (totalSumChanged)="updateTotal($event)"></app-cart>
   <!-- your cart here -->
+  <div>Total: ${{ totalSum }}</div>
+
   <!-- your total here -->
 </main>
